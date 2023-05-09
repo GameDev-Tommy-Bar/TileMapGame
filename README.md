@@ -1,28 +1,86 @@
 # Unity week 5: Two-dimensional scene-building and path-finding
 
-A project with step-by-step scenes illustrating how to construct a 2D scene using tilemaps,
-and how to do path-finding using the BFS algorithm.
+## Part A
+[Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
+### add power tiles to the game
+#### horst tiles - now you can go to trip on the mountains
+#### boat tiles - now you can go to trip on the water
+#### dragon tiles - now you have the power to destroy mountains
+#### play with the keyboard or mouse click
 
-Text explanations are available 
-[here](https://github.com/gamedev-at-ariel/gamedev-5782) in folder 07.
+##### we made some changes to the scripts KeyboardMoverByTile.cs
+###### first we added alowed tiles for each mode
+```
+    [SerializeField]
+    AllowedTiles onWater = null;
 
-## Cloning
-To clone the project, you may need to install git lfs first:
+    [SerializeField]
+    AllowedTiles onMountin = null;
 
-    git lfs install 
+    [SerializeField]
+    AllowedTiles thepower = null;
+    
+    private bool onGoat = false;
+    private bool onBoat = false;
+    private bool ondragon = false;
+```
+###### and added varilable for know wich mode is on
 
+    AllowedTiles currentAllowedTiles = null;
+    
+     if (tileOnNewPosition.name == "dragon")
+        {
+            Debug.Log("You now have the power of the dragon!");
+            ondragon = !ondragon;
+        }
 
-## Credits
+        if (tileOnNewPosition.name == "GOAT")
+        {
+            Debug.Log("You are on a goat!");
+            onGoat = !onGoat;
+        }
+        if (tileOnNewPosition.name == "boat")
+        {
+            Debug.Log("You are on a boat!");
+            onBoat = !onBoat;
+        }
+        
+        if (onBoat == true)
+        {
+            currentAllowedTiles = onWater;
+            ondragon = false;
+            onGoat = false;
+        }
+        else if (onGoat == true)
+        {
+            currentAllowedTiles = onMountin;
+            ondragon = false;
+            onBoat = false;
+        }
+        else if (ondragon == true)
+        {
+            onBoat = false;
+            onGoat = false;
+            currentAllowedTiles = thepower;
+            if (tileOnNewPosition.name == "mountains")
+            {
+                transform.position = newPosition;
+                tilemap.SetTile(tilemap.WorldToCell(newPosition), grassTile);
+                Debug.Log("You have destroyed the mountains!");
+            }
+        }
+        else
+        {
+            currentAllowedTiles = allowedTiles;
+        }
 
-Graphics:
-* [Ultima 4 Graphics](https://github.com/jahshuwaa/u4graphics) by Joshua Steele.
-
-Online course:
-* [Unity 2D](https://www.udemy.com/course/unitycourse/learn/lecture/10246496), a Udemy course by Gamedev.tv.
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
-
-Procedural generation:
-* [Habrador - Unity Programming Patterns](https://github.com/Habrador/Unity-Programming-Patterns#7-double-buffer)
-
-Programming:
-* Erel Segal-Halevi
+  
+  ###### every step will be checked 
+    if (currentAllowedTiles.Contain(tileOnNewPosition))
+        {
+            transform.position = newPosition;
+        }
+        else
+        {
+            Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
+        }
