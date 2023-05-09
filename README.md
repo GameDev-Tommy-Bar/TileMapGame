@@ -74,13 +74,46 @@
             currentAllowedTiles = allowedTiles;
         }
 
-  
-  ###### every step will be checked 
-    if (currentAllowedTiles.Contain(tileOnNewPosition))
-        {
-            transform.position = newPosition;
+## Part B
+[Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
+### map generating position algorithm
+#### added algorithm use the BFS from class to check if the player has at least 100 unique steps to do
+#### if not, new position is generated
+#### play with the keyboard or mouse clicks
+#### we made changes in TilemapCaveGenerator.cs
+#### that method checks if the player position is valid with 100 setps or more.
+    bool possValid(Vector3 pos, Tilemap map)
+#### and added code to the below method
+    private IEnumerator SimulateCavePattern()
+    -------- some code ---------------------
+            Debug.Log("-----------check for position------------");
+        Vector3 PlayerPos = player.transform.position;
+        bool is_on_grass = false;
+        while(!is_on_grass){
+            TileBase tileOnNewPosition = TileOnPosition(PlayerPos);
+        if (allowedTiles.Contain(tileOnNewPosition)) {
+            is_on_grass = true;
         }
-        else
-        {
-            Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
+        else{
+            PlayerPos.x = Random.Range(0, gridSize);
+            PlayerPos.y = Random.Range(0, gridSize);
         }
+        player.transform.position = PlayerPos; 
+        }
+        while (!valid && iterations < maxIterations )
+        {
+            if(iterations > 0){
+                Vector3 newpos = new Vector3(Random.Range(0, gridSize), Random.Range(0, gridSize), 0);
+                player.transform.position = newpos;
+            }
+            iterations++;
+            valid = possValid(PlayerPos, tilemap);
+            
+        }
+        if(valid){
+            Debug.Log("check done in "+iterations+" iterations");
+        }
+
+    }
+
+
