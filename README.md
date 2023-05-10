@@ -72,7 +72,6 @@
         {
             currentAllowedTiles = allowedTiles;
         }
-        
 ## Part B
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
 ### map generating position algorithm
