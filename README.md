@@ -73,7 +73,6 @@
         {
             currentAllowedTiles = allowedTiles;
         }
-####### photos of the game
 ![pic](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/boat.png)
 ![pic2](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/dragon.png)
 ![pic3](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/hourse.png)
