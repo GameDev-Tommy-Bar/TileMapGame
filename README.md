@@ -9,8 +9,7 @@
 #### play with the keyboard or mouse click
 ##### we made some changes to the scripts KeyboardMoverByTile.cs
 ###### first we added alowed tiles for each mode
-```
-
+"```"
     [SerializeField]
     AllowedTiles onWater = null;
 
@@ -23,10 +22,9 @@
     private bool onGoat = false;
     private bool onBoat = false;
     private bool ondragon = false;
-    
-```
+"```"
 ###### and added varilable for know wich mode is on
-
+"```"
     AllowedTiles currentAllowedTiles = null;
     
      if (tileOnNewPosition.name == "dragon")
@@ -74,13 +72,10 @@
         {
             currentAllowedTiles = allowedTiles;
         }
-        
+"```"
 ![pic1](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-1.jpeg)
-
 ![pic2](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-2.jpeg)
-
 ![pic3](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-3.jpeg)
-
 ## Part B
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
 ### map generating position algorithm
@@ -91,6 +86,7 @@
 #### that method checks if the player position is valid with 100 setps or more.
     bool possValid(Vector3 pos, Tilemap map)
 #### and added code to the below method
+"```"
     private IEnumerator SimulateCavePattern()
     -------- some code ---------------------
             Debug.Log("-----------check for position------------");
@@ -122,5 +118,6 @@
         }
 
     }
+    "```"
 
 
