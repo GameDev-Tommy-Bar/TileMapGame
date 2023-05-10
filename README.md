@@ -74,6 +74,13 @@
         {
             currentAllowedTiles = allowedTiles;
         }
+        
+[!pic1](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-1.jpeg)
+
+[!pic2](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-2.jpeg)
+
+[!pic3](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/e20789da8dbb7e975103e78fac760a0d989488f6/Assets/pics/game1-3.jpeg)
+
 ## Part B
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
 ### map generating position algorithm
