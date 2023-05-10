@@ -10,6 +10,7 @@
 ##### we made some changes to the scripts KeyboardMoverByTile.cs
 ###### first we added alowed tiles for each mode
 ```
+
     [SerializeField]
     AllowedTiles onWater = null;
 
@@ -22,6 +23,7 @@
     private bool onGoat = false;
     private bool onBoat = false;
     private bool ondragon = false;
+    
 ```
 ###### and added varilable for know wich mode is on
 
