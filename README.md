@@ -2,14 +2,10 @@
 
 ## Part A
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
-![picto](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/firstlook.png)
 ### add power tiles to the game
 #### horst tiles - now you can go to trip on the mountains
-![pic3](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/hourse.png)
 #### boat tiles - now you can go to trip on the water
-![pic](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/boat.png)
 #### dragon tiles - now you have the power to destroy mountains
-![pic2](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/dragon.png)
 #### play with the keyboard or mouse click
 
 ##### we made some changes to the scripts KeyboardMoverByTile.cs
