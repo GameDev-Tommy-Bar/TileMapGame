@@ -74,6 +74,13 @@
             currentAllowedTiles = allowedTiles;
         }
 ![pic](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/boat.png)
+####### some photo of the game, first we have the boat that you can take to go on water
+![pic2](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/dragon.png)
+####### 2nd photo its the dragon that can remove mountain and put new grass
+![pic3](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/hourse.png)
+####### 3rd we have the hourse that can go on the mountains
+![picto](https://github.com/GameDev-Tommy-Bar/TileMapGame/blob/main/Assets/pics/firstlook.png)
+####### last we have photo of how the game look like in first look
 ## Part B
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
 ### map generating position algorithm
