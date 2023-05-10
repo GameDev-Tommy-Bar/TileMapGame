@@ -7,7 +7,6 @@
 #### boat tiles - now you can go to trip on the water
 #### dragon tiles - now you have the power to destroy mountains
 #### play with the keyboard or mouse click
-
 ##### we made some changes to the scripts KeyboardMoverByTile.cs
 ###### first we added alowed tiles for each mode
 ```
@@ -73,6 +72,7 @@
         {
             currentAllowedTiles = allowedTiles;
         }
+        
 ## Part B
 [Play Now](https://tommy-bar.itch.io/tilemap-game-objects-power)
 ### map generating position algorithm
