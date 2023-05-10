@@ -82,7 +82,7 @@
 #### if not, new position is generated
 #### play with the keyboard or mouse clicks
 #### we made changes in TilemapCaveGenerator.cs
-#### that method checks if the player position is valid with 100 setps or more.
+#### that method checks if the player position is valid with 100 setps or more
     bool possValid(Vector3 pos, Tilemap map)
 #### and added code to the below method
     private IEnumerator SimulateCavePattern()
@@ -116,6 +116,5 @@
         }
 
     }
-    
 
 
